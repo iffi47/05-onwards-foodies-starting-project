@@ -8,8 +8,8 @@ import NavLink from "../nav-link/nav-link";
 export default function MainHeader() {
  const pages = [
   {
-   title: "Meals Share",
-   route: "/meals/share",
+   title: "Browse Meals",
+   route: "/meals",
   },
   {
    title: "Community",
