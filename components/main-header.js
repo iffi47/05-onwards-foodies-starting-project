@@ -1,6 +1,7 @@
 import Link from "next/link";
 import logoImg from "@/assets/logo.png";
 import classes from "./main-header.module.css";
+import Image from "next/image";
 
 export default function MainHeader() {
  const pages = [
@@ -21,9 +22,10 @@ export default function MainHeader() {
   <>
    <header className={classes.header}>
     <Link className={classes.logo} href="/">
-     <img
-      src={logoImg.src}
+     <Image
+      src={logoImg}
       alt="logo-img"
+      priority
      />
      Next Level Food
     </Link>
