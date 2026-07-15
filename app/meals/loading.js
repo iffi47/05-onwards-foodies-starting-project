@@ -1,4 +1,4 @@
-import classes from "@/app/loading.module.css";
+import classes from "@/app/meals/loading.module.css";
 
 export default function Loading() {
   return(
