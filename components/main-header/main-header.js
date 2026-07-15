@@ -3,13 +3,10 @@ import logoImg from "@/assets/logo.png";
 import classes from "./main-header.module.css";
 import Image from "next/image";
 import MainHeaderBackground from "./main-header-background";
+import NavLink from "../nav-link/nav-link";
 
 export default function MainHeader() {
  const pages = [
-  {
-   title: "Meals",
-   route: "/meals",
-  },
   {
    title: "Meals Share",
    route: "/meals/share",
@@ -21,9 +18,11 @@ export default function MainHeader() {
  ];
  return (
   <>
-    <MainHeaderBackground/>
+   <MainHeaderBackground />
    <header className={classes.header}>
-    <Link className={classes.logo} href="/">
+    <Link
+     className={classes.logo}
+     href="/">
      <Image
       src={logoImg}
       alt="logo-img"
@@ -35,7 +34,7 @@ export default function MainHeader() {
      <ul>
       {pages.map((page) => (
        <li key={page.title}>
-        <Link href={page.route}>{page.title}</Link>
+        <NavLink href={page.route} title={page.title} />
        </li>
       ))}
      </ul>
